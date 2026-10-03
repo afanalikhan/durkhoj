@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Dur Khoj & Afan Ali Khan</title>
+  <link rel="stylesheet" href="khoj-ai.css">
+  <link rel="stylesheet" href="about.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- MOBILE TOP HEADER -->
+  <header class="mobile-header">
+    <div class="mobile-logo-wrap">
+      <img src="logo.png" alt="Dur Khoj Logo" class="brand-logo-img">
+      <div class="brand-text">
+        <span class="brand-name">Dur Khoj</span>
+        <span class="brand-tagline">About & Developer Profile</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- PC DESKTOP SIDEBAR -->
+  <aside class="desktop-sidebar">
+    <div class="sidebar-brand">
+      <img src="logo.png" alt="Dur Khoj Logo" class="brand-logo-img">
+      <div class="brand-text">
+        <span class="brand-name">Dur Khoj</span>
+        <span class="brand-tagline">Home in Chitral</span>
+      </div>
+    </div>
+
+    <!-- User Profile Badge -->
+    <div class="user-badge">
+      <div class="user-avatar" id="userAvatar">AA</div>
+      <div class="user-info">
+        <span class="user-name" id="userNameDisplay">Afan Ali Khan</span>
+        <span class="user-role" id="userRoleDisplay">Student Developer</span>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sidebar-nav">
+      <a href="index.html" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        <span>Home Dashboard</span>
+      </a>
+      <a href="favorites.html" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        <span>Favorites</span>
+      </a>
+      <a href="about.html" class="nav-item active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        <span>About & Story</span>
+      </a>
+      <a href="explore.html" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+        <span>Explore All</span>
+      </a>
+      <a href="profile.html" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <span>My Profile</span>
+      </a>
+    </nav>
+
+    <!-- Quick Filter Links Widget -->
+    <div class="sidebar-widget">
+      <span class="widget-title">Explore Topics</span>
+      <div class="region-tags">
+        <a href="#durkhoj" class="region-chip">Dur Khoj & AI</a>
+        <a href="#developer" class="region-chip">About Afan</a>
+        <a href="#fellowships" class="region-chip">Fellowships</a>
+        <a href="#projects" class="region-chip">Global Projects</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="main-content">
+
+    <!-- HERO PROFILE HEADER -->
+    <section class="about-hero">
+      <div class="hero-left">
+        <span class="hero-badge">Chitral to the World</span>
+        <h1>Building Tech with Purpose</h1>
+        <p>Combining local community solutions like <strong>Dur Khoj</strong> with international STEM, climate, and student leadership initiatives.</p>
+        
+        <div class="hero-stats">
+          <div class="hero-stat-pill">
+            <span class="num">Class 9B1</span>
+            <span class="lbl">Langlands School</span>
+          </div>
+          <div class="hero-stat-pill">
+            <span class="num">11 Yrs Old</span>
+            <span class="lbl">Started Coding</span>
+          </div>
+          <div class="hero-stat-pill">
+            <span class="num">Global</span>
+            <span class="lbl">Fellowships & Tech</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE SECTION TABS -->
+    <div class="tabs-nav">
+      <button class="tab-btn active" data-target="sec-durkhoj">🏠 Dur Khoj & Khoj AI</button>
+      <button class="tab-btn" data-target="sec-afan">👨‍💻 About Afan</button>
+      <button class="tab-btn" data-target="sec-global">🌏 International Fellowships</button>
+      <button class="tab-btn" data-target="sec-projects">🚀 Projects & Leadership</button>
+    </div>
+
+    <!-- 1. DUR KHOJ & KHOJ AI SECTION -->
+    <section id="sec-durkhoj" class="section-block active">
+      <div class="card-box glass-effect">
+        <div class="card-header-flex">
+          <div>
+            <span class="sub-tag">Local Real Estate Centralization</span>
+            <h2>About Dur Khoj & Khoj AI</h2>
+          </div>
+          <span class="badge-accent">Chitral, PK</span>
+        </div>
+
+        <p class="lead-text">
+          <strong>Dur Khoj</strong> (meaning <em>"Discovering a Home"</em>) is a dedicated property platform built to solve real community fragmentation in Chitral. Instead of lost WhatsApp messages and unverified posts, it centralizes house sales, land plots, and rentals into one digital space.
+        </p>
+
+        <div class="grid-2">
+          <div class="feature-card">
+            <div class="icon-circle green">🏠</div>
+            <h3>Community First Discovery</h3>
+            <p>Designed around the unique local geography—from Booni to Ayun, Mastuj, and Chitral Town. Owners list directly with zero middleman fees.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon-circle orange">🤖</div>
+            <h3>Khoj AI Assistant Concept</h3>
+            <p>Integrated natural language guide built to help users query real database listings (e.g. <em>"Find a 3 bedroom house in Booni"</em>) without inventing fake data.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT AFAN ALI KHAN -->
+    <section id="sec-afan" class="section-block">
+      <div class="card-box">
+        <div class="dev-profile-header">
+          <div class="dev-avatar-main">AAK</div>
+          <div class="dev-details">
+            <h2>Afan Ali Khan</h2>
+            <p class="dev-subtitle">Student, Self-Taught Programmer & Community Volunteer</p>
+            <span class="school-pill">🎓 Langlands School & College Chitral (Class 9B1)</span>
+          </div>
+        </div>
+
+        <p class="lead-text">
+          I am a curious and ambitious student from Chitral. I believe that being a student is not only about getting good grades—it is about building real skills, solving problems, and contributing positively to society.
+        </p>
+
+        <div class="quote-banner">
+          <p>"Don't just learn something. Build something with it."</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="feature-card">
+            <h3>🎓 Academics & Leadership</h3>
+            <p>Class Monitor, Prefect, and Scout. Core focus on Physics, Chemistry, Biology, Mathematics, and English while actively balancing public speaking and debates.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>💻 Self-Directed Tech Journey</h3>
+            <p>Started coding at 11 with HTML/CSS/JS. Expanded into SQL, Python, Firebase, and Git. Debugging taught me that mistakes are simply valuable information.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. INTERNATIONAL OPPORTUNITIES & FELLOWSHIPS -->
+    <section id="sec-global" class="section-block">
+      <div class="card-box">
+        <div class="section-title-wrap">
+          <span class="sub-tag">Global Horizons</span>
+          <h2>🌏 International Opportunities & Fellowships</h2>
+          <p class="section-desc">Actively pursuing STEM, climate action, civic innovation, and cultural exchanges.</p>
+        </div>
+
+        <div class="fellowship-grid">
+          
+          <!-- NYAS -->
+          <div class="fellowship-card">
+            <div class="card-top">
+              <span class="fellow-tag stem">STEM & Research</span>
+              <h3>🔬 NYAS Junior Academy</h3>
+            </div>
+            <p>Applied to the New York Academy of Sciences Junior Academy to collaborate with international students on STEM challenges, pushing my problem-solving beyond local limits.</p>
+          </div>
+
+          <!-- Climate & Environment -->
+          <div class="fellowship-card">
+            <div class="card-top">
+              <span class="fellow-tag climate">Sustainability</span>
+              <h3>🌎 Stanford Climate Fellowship</h3>
+            </div>
+            <p>Growing up in mountainous Chitral sparked my passion for environmental preservation. Exploring the intersection of climate science, technology, and mountain ecosystems.</p>
+          </div>
+
+          <!-- Civics Unplugged -->
+          <div class="fellowship-card">
+            <div class="card-top">
+              <span class="fellow-tag civic">Civic Action</span>
+              <h3>🤝 Civics Unplugged Fellowship</h3>
+            </div>
+            <p>Engaging with civic innovation frameworks to scale youth-led community projects like local waste cleanup initiatives and public digital tools.</p>
+          </div>
+
+          <!-- AFS Japan -->
+          <div class="fellowship-card">
+            <div class="card-top">
+              <span class="fellow-tag japan">Cultural Exchange</span>
+              <h3>🇯🇵 AFS Asia Kakehashi (Japan)</h3>
+            </div>
+            <p>Actively learning Japanese (mastered Hiragana, working on Katakana) to participate in youth exchange, bridging cultural and educational ties between Pakistan and Japan.</p>
+          </div>
+
+          <!-- UWC -->
+          <div class="fellowship-card full-width">
+            <div class="card-top">
+              <span class="fellow-tag uwc">Global Community</span>
+              <h3>🌍 UWC & International Education</h3>
+            </div>
+            <p>Focused on UWC and global programs to become a stronger communicator and collaborator—bringing international knowledge directly back to empower Chitral.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PROJECTS, LEADERSHIP & COMMUNITY -->
+    <section id="sec-projects" class="section-block">
+      <div class="card-box">
+        <div class="section-title-wrap">
+          <span class="sub-tag">Beyond Code</span>
+          <h2>🚀 Projects, Community & Leadership</h2>
+        </div>
+
+        <div class="projects-vertical">
+          
+          <div class="project-item">
+            <div class="proj-badge">Co-Founder</div>
+            <div>
+              <h3>🌐 Global Student Bridge</h3>
+              <p>An international platform co-founded with Aisha Demeu (Kazakhstan) to connect students across borders to share achievements, scholarships, and opportunities.</p>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <div class="proj-badge green">Community Impact</div>
+            <div>
+              <h3>🌱 Mastuj Cleanliness Initiative</h3>
+              <p>Gathered local children for cleanup drives and introduced decorated bucket dustbins to sustain clean public spaces without complex infrastructure.</p>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <div class="proj-badge orange">Recognized Project</div>
+            <div>
+              <h3>🎮 Exhibition Games & Tools</h3>
+              <p>Built 2D/3D games, grade calculators, and interactive web tools. Presented game projects at school exhibitions to encouraging acclaim.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Honor List -->
+        <div class="honors-banner">
+          <h3>🏆 Experience Highlights</h3>
+          <ul class="honors-list">
+            <li>1+ Year Volunteer at local Jamatkhana</li>
+            <li>CIF alumni</li>
+            <li>Queen's Commonwealth Essay Competition & ICATS Participant</li>
+            <li>NYAS alumni</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MOBILE BOTTOM NAVIGATION -->
+  <nav class="mobile-bottom-nav">
+    <a href="profile.html" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+      <span>Profile</span>
+    </a>
+    <a href="about.html" class="mobile-nav-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+      <span>About</span>
+    </a>
+    <a href="index.html" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span>Home</span>
+    </a>
+    <a href="explore.html" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+      <span>Explore</span>
+    </a>
+  </nav>
+<script src="khoj-ai.js"></script>
+  <script src="about.js"></script>
+<script src="ai-predictor.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dur Khoj - Account Portal</title>
+  <link rel="stylesheet" href="khoj-ai.css">
+  <link rel="stylesheet" href="register.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="auth-container">
+    <div class="auth-card">
+      
+      <!-- Logo Header -->
+      <div class="brand-header">
+        <img src="logo.png" alt="Dur Khoj Logo" class="brand-logo">
+      </div>
+
+      <!-- Navigation Tabs (Register / Sign In) -->
+      <div class="auth-tabs">
+        <button type="button" class="tab-btn active" id="tabRegister">Create Account</button>
+        <button type="button" class="tab-btn" id="tabLogin">Sign In</button>
+      </div>
+
+      <!-- Alert Notification Banner -->
+      <div id="alertBox" class="alert hidden"></div>
+
+      <!-- 1. REGISTER FORM -->
+      <form id="registerForm" class="auth-form active-form">
+        
+        <!-- Role Selection -->
+        <div class="role-selector">
+          <label class="role-card active" id="roleBuyerLabel">
+            <input type="radio" name="role" value="buyer" checked hidden>
+            <span class="role-title">Buyer / Tenant</span>
+            <span class="role-sub">Looking to buy or rent</span>
+          </label>
+          <label class="role-card" id="roleSellerLabel">
+            <input type="radio" name="role" value="seller" hidden>
+            <span class="role-title">Property Owner</span>
+            <span class="role-sub">Sell or list property</span>
+          </label>
+        </div>
+
+        <div class="input-group">
+          <label for="regFullName">Full Name</label>
+          <input type="text" id="regFullName" placeholder="e.g. Ali Ahmad" required>
+        </div>
+
+        <div class="input-group">
+          <label for="regEmail">Email Address</label>
+          <input type="email" id="regEmail" placeholder="e.g. ali@example.com" required>
+        </div>
+
+        <div class="input-group">
+          <label for="regLocation">Location / Area in Chitral</label>
+          <input type="text" id="regLocation" placeholder="e.g. Booni, Main Town, Ayun" required>
+        </div>
+
+        <div class="input-group">
+          <label for="regPassword">Password</label>
+          <input type="password" id="regPassword" placeholder="Create a password" required>
+        </div>
+
+        <div class="input-group">
+          <label for="regConfirmPassword">Confirm Password</label>
+          <input type="password" id="regConfirmPassword" placeholder="Re-enter password" required>
+        </div>
+
+        <button type="submit" class="submit-btn">Create Account & Proceed</button>
+      </form>
+
+      <!-- 2. SIGN IN FORM -->
+      <form id="loginForm" class="auth-form hidden-form">
+        
+        <div class="input-group">
+          <label for="loginEmail">Email Address</label>
+          <input type="email" id="loginEmail" placeholder="Enter your registered email" required>
+        </div>
+
+        <div class="input-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="Enter your password" required>
+        </div>
+
+        <button type="submit" class="submit-btn">Sign In to Dur Khoj</button>
+      </form>
+
+      <div class="auth-footer">
+        <p>Dur Khoj — Finding Your Home In Chitral</p>
+      </div>
+
+    </div>
+  </div>
+<script src="khoj-ai.js"></script>
+  <script src="register.js"></script>
+<script src="ai-predictor.js"></script>
+</body>
+</html>

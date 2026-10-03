@@ -1,0 +1,172 @@
+:root {
+  --khoj-green: #004d25;
+  --khoj-green-soft: #e8f6ee;
+  --khoj-border: #dfeae4;
+  --khoj-text: #1b2d1f;
+  --khoj-muted: #5f6f66;
+}
+
+.khoj-ai-widget {
+  position: fixed;
+  right: 18px;
+  top: 110px;
+  z-index: 99999;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.khoj-ai-launcher {
+  position: relative;
+  left: auto;
+  bottom: auto;
+  border: none;
+  border-radius: 999px;
+  background: var(--khoj-green);
+  color: white;
+  padding: 12px 16px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.khoj-ai-panel {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  bottom: auto;
+  width: min(360px, calc(100vw - 24px));
+  background: #fff;
+  border: 1px solid var(--khoj-border);
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transform: translateY(18px) scale(0.96);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.khoj-ai-widget.open .khoj-ai-panel {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.khoj-ai-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #eaf8f0, #f8fffb);
+  border-bottom: 1px solid var(--khoj-border);
+  padding: 12px 14px;
+}
+
+.khoj-ai-badge {
+  display: inline-block;
+  background: rgba(0, 77, 37, 0.08);
+  color: var(--khoj-green);
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 4px 8px;
+  text-transform: uppercase;
+}
+
+.khoj-ai-header h3 {
+  margin: 6px 0 0;
+  font-size: 18px;
+  color: var(--khoj-green);
+}
+
+.khoj-ai-close {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  color: var(--khoj-muted);
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.khoj-ai-chatbox {
+  max-height: 280px;
+  min-height: 160px;
+  overflow-y: auto;
+  background: #f8faf9;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.khoj-ai-message {
+  max-width: 82%;
+  padding: 10px 12px;
+  border-radius: 14px;
+  line-height: 1.5;
+  font-size: 13px;
+  word-wrap: break-word;
+}
+
+.khoj-ai-message.user {
+  background: var(--khoj-green);
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.khoj-ai-message.bot {
+  background: white;
+  color: var(--khoj-text);
+  border: 1px solid var(--khoj-border);
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.khoj-ai-message.loading {
+  font-style: italic;
+  color: var(--khoj-muted);
+}
+
+.khoj-ai-form {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  background: white;
+  border-top: 1px solid var(--khoj-border);
+}
+
+.khoj-ai-form input {
+  flex: 1;
+  border: 1px solid var(--khoj-border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 13px;
+  min-width: 0;
+}
+
+.khoj-ai-form button {
+  border: none;
+  background: var(--khoj-green);
+  color: white;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .khoj-ai-widget {
+    left: 12px;
+    bottom: 18px;
+  }
+
+  .khoj-ai-panel {
+    width: min(320px, calc(100vw - 18px));
+  }
+}

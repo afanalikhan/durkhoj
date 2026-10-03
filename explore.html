@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Listings — Dur Khoj</title>
+  <link rel="stylesheet" href="khoj-ai.css">
+  <link rel="stylesheet" href="explore.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- MOBILE TOP HEADER -->
+  <header class="mobile-header">
+    <div class="mobile-logo-wrap">
+      <img src="logo.png" alt="Dur Khoj Logo" class="brand-logo-img">
+      <div class="brand-text">
+        <span class="brand-name">Dur Khoj</span>
+        <span class="brand-tagline">Explore Listings</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- DESKTOP SIDEBAR -->
+  <aside class="desktop-sidebar">
+    <div class="sidebar-brand">
+      <img src="logo.png" alt="Dur Khoj Logo" class="brand-logo-img">
+      <div class="brand-text">
+        <span class="brand-name">Dur Khoj</span>
+        <span class="brand-tagline">Home in Chitral</span>
+      </div>
+    </div>
+
+    <!-- Active User Profile Card -->
+    <div class="user-badge">
+      <div class="user-avatar" id="userAvatar">DK</div>
+      <div class="user-info">
+        <span class="user-name" id="userNameDisplay">Guest Visitor</span>
+        <span class="user-role" id="userRoleDisplay">Local Portal Mode</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="index.html" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        <span>Home Dashboard</span>
+      </a>
+      <a href="favorites.html" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        <span>Favorites</span>
+      </a>
+      <a href="about.html" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        <span>About Project</span>
+      </a>
+      <a href="explore.html" class="nav-item active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+        <span>Explore All</span>
+      </a>
+      <a href="profile.html" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <span>My Profile</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- MAIN EXPLORE CONTENT -->
+  <main class="main-content">
+    
+    <!-- SEARCH & FILTER HEADER -->
+    <section class="explore-header-box">
+      <h1>Find Properties in Chitral</h1>
+      <p>Filter by location, purpose, budget, and interact live with listings.</p>
+
+      <!-- SEARCH BAR -->
+      <div class="search-input-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="searchInput" placeholder="Search by area, title, or keywords (e.g. Booni, House, Garden)...">
+      </div>
+
+      <!-- FILTER CONTROLS GRID -->
+      <div class="filter-controls-grid">
+        <div class="filter-group">
+          <label for="locationFilter">Region / Area Name</label>
+          <input type="text" id="locationFilter" placeholder="Type area (e.g. Booni, Ayun, Main Town)...">
+        </div>
+
+        <div class="filter-group">
+          <label for="purposeFilter">Listing Type</label>
+          <select id="purposeFilter">
+            <option value="all">All Types</option>
+            <option value="sale">For Sale</option>
+            <option value="rent">For Rent</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="bedsFilter">Minimum Bedrooms</label>
+          <select id="bedsFilter">
+            <option value="all">Any Beds</option>
+            <option value="1">1+ Bedrooms</option>
+            <option value="2">2+ Bedrooms</option>
+            <option value="3">3+ Bedrooms</option>
+            <option value="4">4+ Bedrooms</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="priceSort">Sort By Price</label>
+          <select id="priceSort">
+            <option value="default">Featured / Default</option>
+            <option value="low-high">Price: Low to High</option>
+            <option value="high-low">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEED SECTION -->
+    <section class="feed-container">
+      <div class="feed-meta">
+        <span class="results-count" id="resultsCount">Showing 0 properties</span>
+        <button class="btn-reset" id="resetFiltersBtn">Reset Filters</button>
+      </div>
+
+      <div class="house-grid" id="houseGrid">
+        <!-- House cards populated dynamically by explore.js -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MOBILE BOTTOM NAVIGATION -->
+  <nav class="mobile-bottom-nav">
+    <a href="profile.html" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+      <span>Profile</span>
+    </a>
+    <a href="about.html" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+      <span>About</span>
+    </a>
+    <a href="index.html" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span>Home</span>
+    </a>
+    <a href="explore.html" class="mobile-nav-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+      <span>Explore</span>
+    </a>
+  </nav>
+<script src="khoj-ai.js"></script>
+  <script src="explore.js"></script>
+<script src="ai-predictor.js"></script>
+</body>
+</html>

@@ -1,0 +1,542 @@
+:root {
+  --primary-green: #004d25;
+  --primary-green-hover: #00361a;
+  --primary-light: #e6f2eb;
+  --secondary-orange: #d9531e;
+  --secondary-orange-hover: #b84114;
+  --bg-color: #f4f7f5;
+  --card-bg: #ffffff;
+  --text-dark: #111827;
+  --text-muted: #6b7280;
+  --border-color: #e5e7eb;
+  --radius-lg: 16px;
+  --radius-md: 10px;
+  --sidebar-width: 280px;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   1. MOBILE TOP HEADER
+   ========================================================================== */
+.mobile-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.mobile-logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo-img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--primary-green);
+  line-height: 1.1;
+}
+
+.brand-tagline {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   2. DESKTOP SIDEBAR
+   ========================================================================== */
+.desktop-sidebar {
+  display: none;
+  width: var(--sidebar-width);
+  background: var(--card-bg);
+  border-right: 1px solid var(--border-color);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 24px 20px;
+  flex-direction: column;
+  z-index: 200;
+  overflow-y: auto;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-brand .brand-logo-img {
+  width: 44px;
+  height: 44px;
+}
+
+.user-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--primary-light);
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  margin-bottom: 20px;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  background: var(--primary-green);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.user-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary-green);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-role {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.nav-item svg {
+  width: 20px;
+  height: 20px;
+}
+
+.nav-item:hover {
+  background: var(--primary-light);
+  color: var(--primary-green);
+}
+
+.nav-item.active {
+  background: var(--primary-green);
+  color: #ffffff;
+}
+
+.nav-item.active svg {
+  stroke: #ffffff;
+}
+
+.sidebar-widget {
+  background: #fafafa;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  margin-bottom: 20px;
+}
+
+.widget-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.region-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.region-chip {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  color: var(--text-dark);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.region-chip:hover {
+  background: var(--primary-green);
+  color: #ffffff;
+  border-color: var(--primary-green);
+}
+
+/* ==========================================================================
+   3. MAIN CONTENT DASHBOARD
+   ========================================================================== */
+.main-content {
+  flex: 1;
+  padding: 20px 16px 90px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Hero Banner */
+.hero-banner {
+  background: linear-gradient(135deg, #004d25 0%, #002d16 100%);
+  color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 8px 20px rgba(0, 77, 37, 0.15);
+}
+
+.hero-text h1 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.hero-text p {
+  font-size: 14px;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.btn-hero-story {
+  align-self: flex-start;
+  background: var(--secondary-orange);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+}
+
+.btn-hero-story:hover {
+  background: var(--secondary-orange-hover);
+}
+
+/* Stats Counter Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.stat-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.stat-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-green {
+  background: #e6f4ec;
+  color: var(--primary-green);
+}
+
+.icon-orange {
+  background: #fdf0eb;
+  color: var(--secondary-orange);
+}
+
+.stat-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Why Choose Dur Khoj Cards */
+.why-wrapper {
+  margin-bottom: 32px;
+}
+
+.section-title-wrap {
+  margin-bottom: 16px;
+}
+
+.section-title-wrap h2 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.section-title-wrap p {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.why-feature-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  transition: var(--transition);
+}
+
+.why-feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  border-color: var(--primary-green);
+}
+
+.why-icon-box {
+  width: 42px;
+  height: 42px;
+  background: var(--primary-light);
+  color: var(--primary-green);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.why-icon-box.orange {
+  background: #fdf0eb;
+  color: var(--secondary-orange);
+}
+
+.why-icon-box svg {
+  width: 22px;
+  height: 22px;
+}
+
+.why-feature-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.why-feature-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* CTA Story Banner */
+.story-cta-card {
+  background: #ffffff;
+  border: 2px dashed var(--primary-green);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.cta-info h3 {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--primary-green);
+  margin-bottom: 4px;
+}
+
+.cta-info p {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.btn-story-full {
+  background: var(--primary-green);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+}
+
+.btn-story-full:hover {
+  background: var(--primary-green-hover);
+}
+
+/* ==========================================================================
+   4. MOBILE BOTTOM NAVIGATION
+   ========================================================================== */
+.mobile-bottom-nav {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  background: var(--card-bg);
+  border-top: 1px solid var(--border-color);
+  z-index: 1000;
+}
+
+.mobile-nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.mobile-nav-item svg {
+  width: 20px;
+  height: 20px;
+}
+
+.mobile-nav-item.active {
+  color: var(--primary-green);
+}
+
+.mobile-nav-item.active svg {
+  stroke: var(--primary-green);
+}
+
+/* ==========================================================================
+   5. RESPONSIVE DESKTOP MEDIA QUERIES
+   ========================================================================== */
+@media (min-width: 768px) {
+  .mobile-header, .mobile-bottom-nav {
+    display: none;
+  }
+
+  .desktop-sidebar {
+    display: flex;
+  }
+
+  body {
+    padding-left: var(--sidebar-width);
+  }
+
+  .main-content {
+    padding: 36px;
+  }
+
+  .hero-banner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px;
+  }
+
+  .hero-text h1 {
+    font-size: 30px;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .story-cta-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

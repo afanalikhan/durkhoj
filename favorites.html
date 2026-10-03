@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Favorites — Dur Khoj</title>
+  
+  <!-- Google Fonts -->
+   <link rel="stylesheet" href="khoj-ai.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="favorites.css">
+</head>
+<body>
+
+  <!-- MOBILE TOP HEADER -->
+  <header class="mobile-header">
+    <div class="mobile-logo-wrap">
+      <img src="logo.png" alt="Dur Khoj Logo" class="brand-logo-img">
+      <div class="brand-text">
+        <span class="brand-name">Dur Khoj</span>
+        <span class="brand-tagline">Saved Properties</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- DESKTOP SIDEBAR (MATCHES HOME DASHBOARD SCREENSHOT EXACTLY) -->
+  <aside class="desktop-sidebar">
+    <div class="sidebar-brand">
+      <img src="logo.png" alt="Dur Khoj Logo" class="brand-logo-img">
+      <div class="brand-text">
+        <span class="brand-name">Dur Khoj</span>
+        <span class="brand-tagline">Home in Chitral</span>
+      </div>
+    </div>
+
+    <!-- User Profile Badge Card -->
+    <div class="sidebar-user-card">
+      <div class="user-avatar-circle" id="sidebarAvatar">M</div>
+      <div class="user-details">
+        <span class="user-name" id="sidebarUserName">mnm</span>
+        <span class="user-role" id="sidebarUserRole">Buyer / Tenant</span>
+      </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="sidebar-nav">
+      <a href="index.html" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        <span>Home Dashboard</span>
+      </a>
+      <a href="favorites.html" class="nav-item active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        <span>Favorites</span>
+      </a>
+      <a href="about.html" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        <span>About Project</span>
+      </a>
+      <a href="explore.html" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+        <span>Explore All</span>
+      </a>
+      <a href="profile.html" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <span>My Profile</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- MAIN CONTENT AREA -->
+  <main class="main-content">
+    <div class="page-header">
+      <h1>Saved Properties</h1>
+      <p id="savedCountText">0 items saved in your favorites list</p>
+    </div>
+
+    <!-- FAVORITES GRID -->
+    <div class="favorites-grid" id="favoritesGrid">
+      <!-- Cards rendered via JS -->
+    </div>
+  </main>
+
+  <!-- MOBILE BOTTOM NAVIGATION -->
+  <nav class="mobile-bottom-nav">
+    <a href="favorites.html" class="mobile-nav-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      <span>Saved</span>
+    </a>
+    <a href="index.html" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span>Home</span>
+    </a>
+    <a href="explore.html" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+      <span>Explore</span>
+    </a>
+    <a href="profile.html" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+      <span>Profile</span>
+    </a>
+  </nav>
+<script src="khoj-ai.js"></script>
+  <script src="favorites.js"></script>
+<script src="ai-predictor.js"></script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile — Dur Khoj</title>
+  <link rel="stylesheet" href="profile.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- MOBILE TOP HEADER -->
+   <link rel="stylesheet" href="khoj-ai.css">
+  <header class="mobile-header">
+    <div class="mobile-logo-wrap">
+      <img src="logo.png" alt="Dur Khoj Logo" class="brand-logo-img">
+      <div class="brand-text">
+        <span class="brand-name">Dur Khoj</span>
+        <span class="brand-tagline">My Profile Dashboard</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- DESKTOP SIDEBAR -->
+  <aside class="desktop-sidebar">
+    <div class="sidebar-brand">
+      <img src="logo.png" alt="Dur Khoj Logo" class="brand-logo-img">
+      <div class="brand-text">
+        <span class="brand-name">Dur Khoj</span>
+        <span class="brand-tagline">Home in Chitral</span>
+      </div>
+    </div>
+
+    <!-- Active User Profile Card -->
+    <div class="user-badge">
+      <div class="user-avatar" id="sidebarAvatar">AA</div>
+      <div class="user-info">
+        <span class="user-name" id="sidebarUserName">Afan Ali Khan</span>
+        <span class="user-role" id="sidebarUserRole">Property Owner</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="index.html" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        <span>Home Dashboard</span>
+      </a>
+      <a href="favorites.html" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        <span>Favorites</span>
+      </a>
+      <a href="about.html" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        <span>About Project</span>
+      </a>
+      <a href="explore.html" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+        <span>Explore All</span>
+      </a>
+      <a href="profile.html" class="nav-item active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <span>My Profile</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- MAIN PROFILE CONTENT -->
+  <main class="main-content">
+
+    <!-- USER PROFILE HERO CARD -->
+    <section class="profile-hero-card">
+      <div class="profile-main-flex">
+        <div class="profile-avatar-lg" id="profileAvatarLg">AA</div>
+        <div class="profile-info-details">
+          <div class="profile-title-row">
+            <h1 id="profileNameDisplay">Afan Ali Khan</h1>
+            <span class="role-badge" id="profileRoleBadge">Property Owner</span>
+          </div>
+          <p class="profile-sub" id="profileEmailDisplay">afan.chitral@example.com</p>
+          <div class="profile-pills">
+            <span class="info-pill">📍 <span id="profileRegionDisplay">Chitral Main Town</span></span>
+            <span class="info-pill">📞 <span id="profilePhoneDisplay">+92 345 9876543</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-actions-bar">
+        <!-- Add Property Button (Hidden if Buyer) -->
+        <button class="btn-primary seller-only-btn" id="openAddModalBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          + Add New Property Listing
+        </button>
+        <button class="btn-secondary" id="openEditProfileModalBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+          Edit Profile
+        </button>
+      </div>
+    </section>
+
+    <!-- METRICS GRID (Hidden for Buyers) -->
+    <section class="stats-grid seller-only-section" id="sellerStatsSection">
+      <div class="stat-card">
+        <div class="stat-icon icon-green">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+        </div>
+        <div class="stat-data">
+          <span class="stat-number" id="statActiveCount">0</span>
+          <span class="stat-label">Active Listings</span>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon icon-orange">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        </div>
+        <div class="stat-data">
+          <span class="stat-number" id="statSoldCount">0</span>
+          <span class="stat-label">Sold / Rented</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- MY LISTINGS SECTION (Hidden for Buyers) -->
+    <section class="my-listings-section seller-only-section" id="sellerListingsSection">
+      <div class="section-title-wrap">
+        <h2>My Managed Properties</h2>
+        <p>Edit details, mark properties as sold/rented, or remove listings live.</p>
+      </div>
+
+      <div class="listings-grid" id="myListingsGrid">
+        <!-- Managed listing cards inserted by JS -->
+      </div>
+    </section>
+
+    <!-- BUYER INFORMATION BANNER (Shown ONLY when role is Buyer / Tenant) -->
+    <section class="buyer-only-section" id="buyerWelcomeSection" style="display: none;">
+      <div class="buyer-welcome-card">
+        <div class="buyer-icon-box">🏡</div>
+        <div class="buyer-text">
+          <h2>Welcome to Your Buyer Portal</h2>
+          <p>You are currently in <strong>Buyer / Tenant Mode</strong>. You can search, explore properties across Chitral, save your favorite listings, and interact with owners.</p>
+          <a href="explore.html" class="btn-primary" style="margin-top: 12px; display: inline-flex;">Explore Properties &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL 1: EDIT PROFILE -->
+  <div class="modal-backdrop" id="editProfileModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Edit Profile Details</h3>
+        <button class="btn-close-modal" id="closeProfileModalBtn">&times;</button>
+      </div>
+      <form id="editProfileForm">
+        <div class="form-group">
+          <label for="editFullName">Full Name</label>
+          <input type="text" id="editFullName" required placeholder="e.g. Afan Ali Khan">
+        </div>
+        <div class="form-group">
+          <label for="editEmail">Email Address</label>
+          <input type="email" id="editEmail" required placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+          <label for="editPhone">Phone Number</label>
+          <input type="text" id="editPhone" placeholder="+92 345 1234567">
+        </div>
+        <div class="form-group">
+          <label for="editRegion">Primary Region</label>
+          <input type="text" id="editRegion" placeholder="e.g. Booni, Chitral Main Town, Ayun">
+        </div>
+        <div class="form-group">
+          <label for="editRole">Account Role</label>
+          <select id="editRole">
+            <option value="Property Owner">Property Owner</option>
+            <option value="Buyer / Tenant">Buyer / Tenant</option>
+            <option value="Local Real Estate Agent">Local Real Estate Agent</option>
+          </select>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary" id="cancelProfileBtn">Cancel</button>
+          <button type="submit" class="btn-primary">Save Profile Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL 2: ADD / EDIT PROPERTY -->
+  <div class="modal-backdrop" id="propertyModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="propModalTitle">Add New Property Listing</h3>
+        <button class="btn-close-modal" id="closePropModalBtn">&times;</button>
+      </div>
+      <form id="propertyForm">
+        <input type="hidden" id="propId">
+        
+        <div class="form-group">
+          <label for="propTitle">Property Title</label>
+          <input type="text" id="propTitle" required placeholder="e.g. 3 Room House in Booni Main Bazaar">
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="propLocation">Location / Area Name</label>
+            <input type="text" id="propLocation" required placeholder="e.g. Garam Chashma, Mastuj, Ayun, Drosh">
+          </div>
+          <div class="form-group">
+            <label for="propPurpose">Listing Type</label>
+            <select id="propPurpose">
+              <option value="sale">For Sale</option>
+              <option value="rent">For Rent</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="propPhone">Contact Phone Number</label>
+          <input type="tel" id="propPhone" required placeholder="e.g. +92 345 9876543">
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="propPrice">Price Amount (PKR)</label>
+            <input type="number" id="propPrice" required placeholder="e.g. 4500000">
+          </div>
+          <div class="form-group">
+            <label for="propPriceFormatted">Formatted Price Display</label>
+            <input type="text" id="propPriceFormatted" placeholder="e.g. PKR 45 Lakh or PKR 30,000/Mo">
+          </div>
+        </div>
+
+        <div class="form-row-3">
+          <div class="form-group">
+            <label for="propBeds">Bedrooms</label>
+            <input type="number" id="propBeds" min="1" value="2" required>
+          </div>
+          <div class="form-group">
+            <label for="propBaths">Bathrooms</label>
+            <input type="number" id="propBaths" min="1" value="1" required>
+          </div>
+          <div class="form-group">
+            <label for="propArea">Area / Size</label>
+            <input type="text" id="propArea" placeholder="e.g. 10 Marla" required>
+          </div>
+        </div>
+
+        <!-- MULTIPLE IMAGE UPLOAD FIELD -->
+        <div class="form-group">
+          <label for="propImageFile">Upload Property Photos (Multiple Files Allowed)</label>
+          <input type="file" id="propImageFile" accept="image/*" multiple>
+          <div id="imagePreviewContainer" style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px;"></div>
+        </div>
+
+        <!-- OPTIONAL WEB IMAGE URL FIELD -->
+        <div class="form-group">
+          <label for="propImage">OR Image Web URL (Optional)</label>
+          <input type="url" id="propImage" placeholder="https://images.unsplash.com/...">
+        </div>
+
+        <div class="form-group">
+          <label for="propDescription">Description</label>
+          <textarea id="propDescription" rows="3" placeholder="Describe property features, access roads, water supply, garden, etc."></textarea>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary" id="cancelPropBtn">Cancel</button>
+          <button type="submit" class="btn-primary" id="savePropBtn">Save Listing</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MOBILE BOTTOM NAVIGATION -->
+  <nav class="mobile-bottom-nav">
+    <a href="profile.html" class="mobile-nav-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+      <span>Profile</span>
+    </a>
+    <a href="about.html" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+      <span>About</span>
+    </a>
+    <a href="index.html" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span>Home</span>
+    </a>
+    <a href="explore.html" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+      <span>Explore</span>
+    </a>
+  </nav>
+<script src="khoj-ai.js"></script>
+  <script src="profile.js"></script>
+<script src="ai-predictor.js"></script>
+</body>
+</html>
